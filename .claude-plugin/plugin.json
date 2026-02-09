@@ -1,0 +1,9 @@
+{
+  "name": "balancing-services",
+  "description": "European electricity balancing market data via the Balancing Services CLI",
+  "version": "0.0.1",
+  "author": { "name": "Balancing Services" },
+  "homepage": "https://balancing.services",
+  "repository": "https://github.com/Balancing-Services/balancing-services-for-claude",
+  "keywords": ["energy", "balancing", "electricity", "europe", "cli", "short-term power markets", "balancing markets"]
+}
