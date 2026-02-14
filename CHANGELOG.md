@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Add information about minimum version of bs-cli
+
 ### Changed
 - Require `issueApiToken` MCP tool before proceeding with any API queries
 - Instruct agent to stop and ask user to authenticate if tool is unavailable, offering help finding relevant documentation

@@ -19,7 +19,12 @@ The API's OpenAPI definition is available at https://api.balancing.services/v1/o
 bs-cli --token $TOKEN [options] <command> [command-options]
 ```
 
-The CLI is available on [PyPI](https://pypi.org/project/balancing-services-cli/) as `balancing-services-cli`. Install it with `uv tool install balancing-services-cli`, or run it without installing via `uvx --from balancing-services-cli bs-cli ...`.
+The CLI is available on [PyPI](https://pypi.org/project/balancing-services-cli/) as `balancing-services-cli`. The minimum required version is **1.6.0.post5**. For example:
+- `uv tool install "balancing-services-cli>=1.6.0.post5"`
+- `uvx --from "balancing-services-cli>=1.6.0.post5" bs-cli ...` (run without installing)
+- `pip install "balancing-services-cli>=1.6.0.post5"`
+
+If a documented option is not available, upgrade the CLI (e.g. `uv tool install --upgrade balancing-services-cli` or `pip install --upgrade balancing-services-cli`).
 
 ### Authentication
 
@@ -45,7 +50,7 @@ The `-o`, `-f`, and `-v` flags are **root-level options** and must be placed **b
 - **Parquet file**: `bs-cli --token $TOKEN -o data.parquet <command> [command-options]`
   Parquet requires the extra dependency. Use:
   ```
-  uvx --from "balancing-services-cli[parquet]" bs-cli --token $TOKEN -o data.parquet <command> ...
+  uvx --from "balancing-services-cli[parquet]>=1.6.0.post5" bs-cli --token $TOKEN -o data.parquet <command> ...
   ```
 
 **Note:** JSON output is not supported. Use CSV (default) or Parquet.
@@ -75,6 +80,5 @@ Use these as `--reserve-type` values (lowercase): `fcr`, `afrr`, `mfrr`, `rr`.
 ## Tips
 
 - Use `bs-cli -v <command> ...` to see progress messages during long queries.
-- Bid endpoints (`energy-bids`, `capacity-bids`) auto-paginate and may take longer for wide time ranges.
 - When comparing countries, run multiple queries and combine the results.
 - For analysis, save to Parquet (`bs-cli --token $TOKEN -o data.parquet <command> ...`) and use DuckDB for efficient aggregate queries: `duckdb -c "SELECT ... FROM 'data.parquet'"`.
