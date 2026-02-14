@@ -23,9 +23,10 @@ The CLI is available on [PyPI](https://pypi.org/project/balancing-services-cli/)
 
 ### Authentication
 
-Get a token by calling the `issueApiKey` MCP tool and pass it with `--token`.
+**Before doing anything else**, verify that the `issueApiToken` MCP tool is available. This is the only way to obtain an API token — there is no other authentication method.
 
-If `issueApiKey` is not available, ask the user to authenticate the MCP server via `/mcp`.
+- If available: call `issueApiToken` to get a token and pass it with `--token`. The token is valid for 1 hour.
+- If NOT available: **stop immediately** and ask the user to authenticate the `balancing-services-api` MCP server and offer your help for finding relevant documentation. Do not attempt to proceed without a token.
 
 ## How to Use the CLI
 
