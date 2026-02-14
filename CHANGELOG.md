@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Require `issueApiToken` MCP tool before proceeding with any API queries
+- Instruct agent to stop and ask user to authenticate if tool is unavailable, offering help finding relevant documentation
+- Rename MCP tool reference from `issueApiKey` to `issueApiToken`
+
 ## [0.0.1] - 2026-02-09
 
 ### Added
