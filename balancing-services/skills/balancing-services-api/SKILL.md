@@ -4,7 +4,7 @@ description: >
   Use when working with European electricity balancing market data, imbalance prices,
   balancing energy, capacity bids, or the Balancing Services API. Activates for energy
   market analysis, TSO data queries, and reserve type lookups.
-allowed-tools: Bash(bs-cli *), Bash(uvx --from balancing-services-cli *), Bash(uvx --from "balancing-services-cli*" *)
+allowed-tools: Bash(bs-cli *), Bash(uvx --from balancing-services-cli *), Bash(uvx --from "balancing-services-cli*" *), Bash(*explore-cli-install-options.sh)
 ---
 
 # Balancing Services API
@@ -19,12 +19,13 @@ The API's OpenAPI definition is available at https://api.balancing.services/v1/o
 bs-cli --token $TOKEN [options] <command> [command-options]
 ```
 
-The CLI is available on [PyPI](https://pypi.org/project/balancing-services-cli/) as `balancing-services-cli`. The minimum required version is **1.6.0.post5**. For example:
-- `uv tool install "balancing-services-cli>=1.6.0.post5"`
-- `uvx --from "balancing-services-cli>=1.6.0.post5" bs-cli ...` (run without installing)
-- `pip install "balancing-services-cli>=1.6.0.post5"`
+The CLI is available on [PyPI](https://pypi.org/project/balancing-services-cli/) as `balancing-services-cli`.
 
-If a documented option is not available, upgrade the CLI (e.g. `uv tool install --upgrade balancing-services-cli` or `pip install --upgrade balancing-services-cli`).
+If `bs-cli` is not already installed, run the install-options discovery script to see which package managers are available and get ready-to-use install/upgrade commands:
+
+```
+scripts/explore-cli-install-options.sh
+```
 
 ### Authentication
 
@@ -50,7 +51,7 @@ The `-o`, `-f`, and `-v` flags are **root-level options** and must be placed **b
 - **Parquet file**: `bs-cli --token $TOKEN -o data.parquet <command> [command-options]`
   Parquet requires the extra dependency. Use:
   ```
-  uvx --from "balancing-services-cli[parquet]>=1.6.0.post5" bs-cli --token $TOKEN -o data.parquet <command> ...
+  uvx --from "balancing-services-cli[parquet]" bs-cli --token $TOKEN -o data.parquet <command> ...
   ```
 
 **Note:** JSON output is not supported. Use CSV (default) or Parquet.
