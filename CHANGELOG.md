@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Add information about minimum version of bs-cli
+- Instruct agent to run `bs-cli check-update` when using a pre-installed version of the CLI
 
 ### Changed
 - Require `issueApiToken` MCP tool before proceeding with any API queries

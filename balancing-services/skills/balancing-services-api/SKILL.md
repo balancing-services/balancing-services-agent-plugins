@@ -27,6 +27,14 @@ If `bs-cli` is not already installed, run the install-options discovery script t
 scripts/explore-cli-install-options.sh
 ```
 
+If `bs-cli` is already installed, check for updates before proceeding:
+
+```
+bs-cli check-update
+```
+
+If a newer version is available, follow the upgrade instructions printed by the command.
+
 ### Authentication
 
 **Before doing anything else**, verify that the `issueApiToken` MCP tool is available. This is the only way to obtain an API token — there is no other authentication method.
