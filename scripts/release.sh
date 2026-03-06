@@ -63,7 +63,7 @@ if git rev-parse "v${NEW_VERSION}" >/dev/null 2>&1; then
 fi
 
 # Get current version from plugin.json
-CURRENT_VERSION=$(grep '"version"' balancing-services/.plugin/plugin.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+CURRENT_VERSION=$(grep '"version"' balancing-services/.claude-plugin/plugin.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
 
 if [ "$DRY_RUN" = true ]; then
     echo -e "${YELLOW}[DRY RUN] Releasing version ${NEW_VERSION} (current: ${CURRENT_VERSION})${NC}"
@@ -74,9 +74,10 @@ echo ""
 
 # --- Update files ---
 
-# Update plugin.json version
-echo "Updating balancing-services/.plugin/plugin.json..."
-sed -i "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" balancing-services/.plugin/plugin.json
+# Update plugin.json version in both Claude and Cursor plugin directories
+echo "Updating plugin.json versions..."
+sed -i "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" balancing-services/.claude-plugin/plugin.json
+sed -i "s/\"version\": \"${CURRENT_VERSION}\"/\"version\": \"${NEW_VERSION}\"/" balancing-services/.cursor-plugin/plugin.json
 
 # Update CHANGELOG.md - stamp the [Unreleased] section with the new version and date
 echo "Updating CHANGELOG.md..."
@@ -107,13 +108,13 @@ if [ "$DRY_RUN" = true ]; then
     echo ""
     echo -e "${YELLOW}[DRY RUN] Would commit, tag v${NEW_VERSION}, and push to origin${NC}"
     echo "Reverting file changes..."
-    git checkout -- CHANGELOG.md balancing-services/.plugin/plugin.json
+    git checkout -- CHANGELOG.md balancing-services/.claude-plugin/plugin.json balancing-services/.cursor-plugin/plugin.json
     exit 0
 fi
 
 echo ""
 echo "Creating commit and tag..."
-git add CHANGELOG.md balancing-services/.plugin/plugin.json
+git add CHANGELOG.md balancing-services/.claude-plugin/plugin.json balancing-services/.cursor-plugin/plugin.json
 git commit -m "Release ${NEW_VERSION}"
 git tag "v${NEW_VERSION}"
 
