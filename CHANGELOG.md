@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Remove unsupported `logo` field from Claude plugin manifest that caused marketplace validation failure
+
 ## [0.0.3] - 2026-03-06
 
 ### Added
