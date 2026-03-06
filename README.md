@@ -16,6 +16,10 @@ An agent plugin marketplace for working with European electricity balancing mark
 /plugin marketplace add Balancing-Services/balancing-services-agent-plugins
 ```
 
+### Cursor IDE
+
+Use `/add-plugin` in the agent chat to browse the Cursor Marketplace, or ask your team admin to import this repository under **Dashboard > Settings > Plugins > Team Marketplaces**.
+
 ### Claude Co-work
 
 Add the marketplace under **Settings > Plugins > Add marketplace** using `Balancing-Services/balancing-services-agent-plugins`.

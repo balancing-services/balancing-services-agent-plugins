@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Cursor IDE plugin support (`.cursor-plugin/` manifests)
+- Cursor IDE setup instructions in READMEs
+
+### Changed
+- Canonical manifests moved to `.plugin/` directories, symlinked into `.claude-plugin/` and `.cursor-plugin/`
+
 ## [0.0.2] - 2026-02-17
 
 ### Added
