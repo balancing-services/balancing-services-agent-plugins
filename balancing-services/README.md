@@ -19,6 +19,10 @@ An agent plugin for working with European electricity balancing markets.
 claude plugin install --local /path/to/balancing-services-agent-plugins/balancing-services
 ```
 
+### Cursor IDE
+
+Use `/add-plugin` in the agent chat to find and install **balancing-services** from the Cursor Marketplace. For team setups, see the [root README](../README.md#cursor-ide).
+
 ### Claude Co-work
 
 Install from the marketplace — see the [root README](../README.md#claude-co-work) for adding the marketplace, then install **balancing-services** from the plugin list.
