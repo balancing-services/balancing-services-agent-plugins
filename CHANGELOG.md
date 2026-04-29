@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 2026-04-29
+
 ### Fixed
 - Replace tracked symlinks with regular files so the marketplace and plugin work on Windows checkouts
 
@@ -43,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Marketplace manifest for plugin discovery
 - Plugin metadata (`plugin.json`) with author, homepage, and repository info
 
-[Unreleased]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.4...HEAD
+[Unreleased]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.5...HEAD
+[0.0.5]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/Balancing-Services/balancing-services-agent-plugins/compare/v0.0.1...v0.0.2
