@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Replace tracked symlinks with regular files so the marketplace and plugin work on Windows checkouts
+
 ## [0.0.4] - 2026-03-06
 
 ### Fixed

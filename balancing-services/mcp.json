@@ -1,1 +1,8 @@
-.mcp.json
+{
+  "mcpServers": {
+    "balancing-services-api": {
+      "type": "http",
+      "url": "https://agents.balancing.services/mcp"
+    }
+  }
+}

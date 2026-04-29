@@ -1,1 +1,13 @@
-../.plugin/marketplace.json
+{
+  "name": "balancing-services-marketplace",
+  "owner": {
+    "name": "Balancing Services"
+  },
+  "plugins": [
+    {
+      "name": "balancing-services",
+      "source": "./balancing-services",
+      "description": "European electricity balancing market data via the Balancing Services CLI"
+    }
+  ]
+}
