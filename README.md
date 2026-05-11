@@ -32,4 +32,3 @@ Then install individual plugins — see each plugin's README for details.
 
 - [Balancing Services](https://balancing.services)
 - [API Documentation](https://api.balancing.services/v1/documentation)
-- [CLI on PyPI](https://pypi.org/project/balancing-services-cli/)

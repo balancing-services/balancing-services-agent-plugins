@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Skill now routes balancing data queries through the `queryBalancingServices` MCP tool (previously: install and shell out to `bs-cli`)
+- Manifest and README descriptions updated to reference the MCP server instead of the CLI
+
+### Removed
+- `bs-cli` usage instructions, install discovery script, and the `issueApiToken` precondition from the `balancing-services-api` skill (no longer needed; the MCP tool covers all subcommands and authenticates via the MCP server's JWT)
+
 ## [0.0.5] - 2026-04-29
 
 ### Fixed
