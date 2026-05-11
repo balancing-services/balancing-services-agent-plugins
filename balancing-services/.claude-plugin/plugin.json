@@ -1,9 +1,9 @@
 {
   "name": "balancing-services",
-  "description": "European electricity balancing market data via the Balancing Services CLI",
+  "description": "European electricity balancing market data via the Balancing Services MCP server",
   "version": "0.0.5",
   "author": { "name": "Balancing Services" },
   "homepage": "https://balancing.services",
   "repository": "https://github.com/Balancing-Services/balancing-services-agent-plugins",
-  "keywords": ["energy", "balancing", "electricity", "europe", "cli", "short-term power markets", "balancing markets"]
+  "keywords": ["energy", "balancing", "electricity", "europe", "mcp", "short-term power markets", "balancing markets"]
 }

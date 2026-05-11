@@ -7,7 +7,7 @@
     {
       "name": "balancing-services",
       "source": "./balancing-services",
-      "description": "European electricity balancing market data via the Balancing Services CLI"
+      "description": "European electricity balancing market data via the Balancing Services MCP server"
     }
   ]
 }
